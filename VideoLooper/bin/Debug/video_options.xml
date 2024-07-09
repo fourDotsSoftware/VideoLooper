@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VideoOptions>  
+  <FrameRates>
+  <FrameRate>24.0 (Film)</FrameRate>
+  <FrameRate>25.0 (PAL)</FrameRate>
+  <FrameRate>29.97 (NTSC)</FrameRate>  
+  <FrameRate>30.0</FrameRate>
+  <FrameRate>50.0</FrameRate>
+  <FrameRate>60.0</FrameRate>
+  <FrameRate>23.976 (IVTC Film)</FrameRate>
+  <FrameRate>15.0 (Multimedia)</FrameRate>
+  <FrameRate>12.0 (Half Film) </FrameRate>
+  <FrameRate>12.5 (Half PAL)</FrameRate>
+  <FrameRate>14.985 (Half NTSC)</FrameRate>  
+  </FrameRates>
+  
+  <VideoSizes>
+  <VideoSize>1080p (1920x1080) Full HD - FHD - HD - High Definition </VideoSize>
+  <VideoSize>720p (1280x720) HD - High Definition</VideoSize>
+  <VideoSize>DVCPRO - HD 1080(1280x1080)</VideoSize>
+  
+  <VideoSize>AVCHD - HDV (1440x1080)</VideoSize>
+  <VideoSize>HDTV (1366x768)</VideoSize>
+  <VideoSize>XGA (1024x768)</VideoSize>
+  <VideoSize>PAL (720x576)</VideoSize>
+  <VideoSize>PAL 4:3 (768x576)</VideoSize>
+  <VideoSize>WVGA - Wide SD (720x480) </VideoSize>
+  <VideoSize>NTSC 4:3 (720x540)</VideoSize>
+  <VideoSize>720x543</VideoSize>  
+  <VideoSize>VGA - 4:3:SD (640x480)</VideoSize>
+  <VideoSize>QVGA (320x240)</VideoSize>    
+  <VideoSize>480p (640x480)</VideoSize>
+  <VideoSize>1440p (2560x1440) QHD - Quad HD</VideoSize>
+  <VideoSize>2K (2048x1556)</VideoSize>
+  <VideoSize>UHD(3840x2160) 4K - Ultra HD - Ultra-High Definition</VideoSize>
+  <VideoSize>4k (4096x3112)</VideoSize>
+  <VideoSize>8K (7680x4320)</VideoSize>
+  <VideoSize>WUXGA (1920x1200) Widescreen Ultra Extended Graphics Array</VideoSize>
+  <VideoSize>Cineon Full (3656x2664)</VideoSize>
+  <VideoSize>Cineon Half (1828x1332)</VideoSize>  
+  <VideoSize>788x576</VideoSize>
+  <VideoSize>1050x576</VideoSize>
+  <VideoSize>872x486</VideoSize>
+  <VideoSize>DVGA (960x640)</VideoSize>
+  <VideoSize>960x720</VideoSize>
+  </VideoSizes>
+ 
+ <AspectRatios>
+ <AspectRatio>4:3</AspectRatio>
+ <AspectRatio>16:9</AspectRatio>
+ <AspectRatio>21:9</AspectRatio>
+ <AspectRatio>14:10</AspectRatio>
+ <AspectRatio>19:10</AspectRatio>
+ 
+ </AspectRatios>
+ 
+  <Volumes>
+  <Volume>90%</Volume>
+  <Volume>80%</Volume>
+  <Volume>70%</Volume>
+  <Volume>60%</Volume>
+  <Volume>50%</Volume>
+  <Volume>40%</Volume>
+  <Volume>30%</Volume>
+  <Volume>20%</Volume>
+  <Volume>10%</Volume>
+  <Volume>150%</Volume>
+  <Volume>200%</Volume>   
+  </Volumes>
+  
+  <AudioBitrates>
+  <AudioBitrate>32k</AudioBitrate>
+  <AudioBitrate>64k</AudioBitrate>
+  <AudioBitrate>96k</AudioBitrate>
+  <AudioBitrate>128k</AudioBitrate>
+  <AudioBitrate>160k</AudioBitrate>
+  <AudioBitrate>192k</AudioBitrate>
+  <AudioBitrate>256k</AudioBitrate>
+  <AudioBitrate>320k</AudioBitrate>  
+  </AudioBitrates>
+  
+  <AudioSampleRates>
+  <AudioSampleRate>22050 kHz</AudioSampleRate>
+  <AudioSampleRate>22050 kHz</AudioSampleRate>
+  <AudioSampleRate>32000 kHz</AudioSampleRate>
+  <AudioSampleRate>44100 kHz</AudioSampleRate>
+  <AudioSampleRate>48000 kHz</AudioSampleRate>
+  <AudioSampleRate>88200 kHz</AudioSampleRate>
+  <AudioSampleRate>96000 kHz</AudioSampleRate>  
+  <AudioSampleRate>16000 kHz</AudioSampleRate>  
+  </AudioSampleRates>
+  <AudioChannels>
+  <AudioChannel>2</AudioChannel>
+  <AudioChannel>1</AudioChannel>
+  <AudioChannel>5.1</AudioChannel>  
+  </AudioChannels>  
+
+	<VideoBitrates>
+	<VideoBitrate>192k</VideoBitrate>
+	<VideoBitrate>384k</VideoBitrate>
+	<VideoBitrate>768k</VideoBitrate>
+	<VideoBitrate>1000k</VideoBitrate>	
+	<VideoBitrate>1500k</VideoBitrate>	
+	<VideoBitrate>2000k</VideoBitrate>	
+	<VideoBitrate>4000k</VideoBitrate>	
+	<VideoBitrate>8000k</VideoBitrate>	
+	<VideoBitrate>10000k</VideoBitrate>
+	<VideoBitrate>12000k</VideoBitrate>
+	<VideoBitrate>14000k</VideoBitrate>	
+	<VideoBitrate>20000k</VideoBitrate>
+	<VideoBitrate>28000k</VideoBitrate>
+	<VideoBitrate>30000k</VideoBitrate>
+	<VideoBitrate>48000k</VideoBitrate>	
+	</VideoBitrates>
+  
+ <Formats>
+<Format>3gp|3GP (3GPP file format)</Format>
+<Format>3g2|3GP2 (3GPP2 file format)</Format>
+<Format>ac3|raw AC-3</Format>
+<Format>adts|ADTS AAC (Advanced Audio Coding)|aac</Format>
+<Format>amr|3GPP AMR</Format>
+<Format>asf|ASF (Advanced / Active Streaming Format)</Format>
+<Format>au|Sun AU</Format>
+<Format>avi|AVI (Audio Video Interleaved)</Format>
+<Format>dts|raw DTS</Format>
+<Format>dv|DV (Digital Video)</Format>
+<Format>dvd|MPEG-2 PS (DVD VOB)|vob</Format>
+<Format>flac|raw FLAC</Format>
+<Format>flv|FLV (Flash Video)</Format>
+<Format>h263|raw H.263</Format>
+<Format>h264|raw H.264 video</Format>
+<Format>ipod|iPod H.264 MP4 (MPEG-4 Part 14)|mp4</Format>
+<Format>m4v|raw MPEG-4 video</Format>
+<Format>matroska|Matroska|mkv</Format>
+<Format>mjpeg|raw MJPEG video</Format>
+<Format>mov|QuickTime / MOV</Format>
+<Format>mp2|MP2 (MPEG audio layer 2)</Format>
+<Format>mp3|MP3 (MPEG audio layer 3)</Format>
+<Format>mp4|MP4 (MPEG-4 Part 14)</Format>
+<Format>mpeg|MPEG-1 Systems / MPEG program stream</Format>
+<Format>mpeg1video|raw MPEG-1 video|mpv</Format>
+<Format>mpeg2video|raw MPEG-2 video|m2v</Format>
+<Format>ogg|Ogg|ogv</Format>
+<Format>psp|PSP MP4 (MPEG-4 Part 14)|mp4</Format>
+<Format>rawvideo|raw video|raw</Format>
+<Format>rm|RealMedia</Format>
+<Format>svcd|MPEG-2 PS (SVCD)|mpg</Format>
+<Format>swf|SWF (ShockWave Flash)</Format>
+<Format>vcd|MPEG-1 Systems / MPEG program stream (VCD)|dat</Format>
+<Format>vob|MPEG-2 PS (VOB)</Format>
+<Format>voc|Creative Voice</Format>
+<Format>wav|WAV / WAVE (Waveform Audio)</Format>
+<Format>webm|WebM</Format>
+</Formats>
+  </VideoOptions>

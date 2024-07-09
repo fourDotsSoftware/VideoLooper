@@ -1,0 +1,57 @@
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\bin\Debug\VideoLooper.exe
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\bin\Debug\VideoLooper.pdb
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.CustomForm.resources
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmAbout.resources
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmAdeia.resources
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmDownloadUpdate.resources
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmError.resources
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmLanguage.resources
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmMain.resources
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmMessage.resources
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmOutputFormat.resources
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmOutputSubFolder.resources
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmPleaseBuy.resources
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmProfile.resources
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmProgress.resources
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmPurchase.resources
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.Properties.Resources.resources
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.ResFlags.resources
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.ResRegister.resources
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.ResTranslate.resources
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.TimeUpDownControl.resources
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.ucTextProgressBar.resources
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.csproj.GenerateResource.Cache
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.exe
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.pdb
+C:\code\Video Audio Tools\VideoLooper\VideoLooper\bin\Debug\VideoLooper.exe.config
+c:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.csprojAssemblyReference.cache
+c:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.csproj.CoreCompileInputs.cache
+c:\code\Video Audio Tools\VideoLooper\VideoLooper\obj\Debug\VideoLooper.csproj.CopyComplete
+c:\code\Video Audio Tools\VideoLooper\VideoLooper\bin\Debug\com.softpcapps.download-software.dll
+c:\code\Video Audio Tools\VideoLooper\VideoLooper\bin\Debug\com.softpcapps.download-software.pdb
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.csprojAssemblyReference.cache
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.CustomForm.resources
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmAbout.resources
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmDownloadUpdate.resources
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmError.resources
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmLanguage.resources
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmMain.resources
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmMessage.resources
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmOutputFormat.resources
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmOutputSubFolder.resources
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmProfile.resources
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.frmProgress.resources
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.Properties.Resources.resources
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.ResFlags.resources
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.ResTranslate.resources
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.TimeUpDownControl.resources
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.ucTextProgressBar.resources
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.csproj.GenerateResource.cache
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.csproj.CoreCompileInputs.cache
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.exe
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.pdb
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\bin\Debug\VideoLooper.exe.config
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\bin\Debug\VideoLooper.exe
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\bin\Debug\VideoLooper.pdb
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\bin\Debug\com.softpcapps.download-software.pdb
+c:\Users\alex\Documents\GitHub\VideoLooper\VideoLooper\obj\Debug\VideoLooper.csproj.CopyComplete

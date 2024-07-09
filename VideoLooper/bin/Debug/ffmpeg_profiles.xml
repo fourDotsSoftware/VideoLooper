@@ -1,0 +1,822 @@
+<Profiles>
+  <Profile name="CDWavStereo">
+    <label>Wav for CD</label>
+    <cat>Audio</cat>
+    <ext>wav</ext>
+	<format>wav</format>
+    <ffmpeg_parameters>-vn -ar 44100</ffmpeg_parameters>
+  </Profile>
+  <Profile name="M4a">
+    <label>MPEG4 Audio</label>
+    <cat>Audio</cat>
+    <ext>m4a</ext>
+	<format></format>
+    <ffmpeg_parameters>-vn -acodec aac -b:a 112k -ac 2 -ar 48000</ffmpeg_parameters>
+  </Profile>
+  <Profile name="MPEG4VideoHQ">
+    <label>MPEG-4 720p</label>
+    <cat>MPEG-4</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters>-crf 20.0 -vcodec libx264 -vf scale=1280:720 -preset slow -acodec aac -ar 48000 -b:a 128k -coder 1 -flags +loop -cmp chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1 -threads 0</ffmpeg_parameters>
+  </Profile>
+  <Profile name="MPEG4VideoSHQ">
+    <label>MPEG-4 1080p</label>
+    <cat>MPEG-4</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters>-crf 18.0 -vcodec libx264 -vf scale=1920:1080 -preset veryslow -acodec aac -ar 48000 -b:a 192k -coder 1 -flags +loop -cmp chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1 -threads 0</ffmpeg_parameters>
+  </Profile>
+  <Profile name="XviDAVIFS">
+    <label>XviD FullScreen</label>
+    <cat>AVI</cat>
+    <ext>avi</ext>
+	<format>avi</format>
+    <ffmpeg_parameters>-f avi -r 29.97 -vcodec libxvid -vtag XVID -vf scale=640:480 -aspect 4:3 -maxrate 1800k -b:v 1500k -qmin 3 -qmax 5 -bufsize 4096 -mbd 2 -bf 2 -trellis 1 -flags +aic -cmp 2 -subcmp 2 -g 300 -acodec libmp3lame -ar 48000 -b:a 128k -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="XviDAVIWS">
+    <label>XviD Widescreen</label>
+    <cat>AVI</cat>
+    <ext>avi</ext>
+	<format>avi</format>
+    <ffmpeg_parameters>-f avi -r 29.97 -vcodec libxvid -vtag XVID -vf scale=704:384 -aspect 16:9 -maxrate 1800k -b:v 1500k -qmin 3 -qmax 5 -bufsize 4096 -mbd 2 -bf 2 -trellis 1 -flags +aic -cmp 2 -subcmp 2 -g 300 -acodec libmp3lame -ar 48000 -b:a 128k -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="XviDAVIWSAna">
+    <label>XviD Widescreen Anamorphic</label>
+    <cat>AVI</cat>
+    <ext>avi</ext>
+	<format>avi</format>
+    <ffmpeg_parameters>-f avi -r 29.97 -vf crop=iw:ih-58-62:0:58,scale=640:272 -vcodec libxvid -vtag XVID -aspect 2.35 -maxrate 1800k -b:v 1500k -qmin 3 -qmax 5 -bufsize 4096 -mbd 2 -bf 2 -trellis 1 -flags +aic -cmp 2 -subcmp 2 -g 300 -acodec libmp3lame -ar 48000 -b:a 128k -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="ac3dvd192">
+    <label>Ac3 DVD - 192kbps Stereo</label>
+    <cat>Audio</cat>
+    <ext>ac3</ext>
+	<format>ac3</format>
+    <ffmpeg_parameters>-f ac3 -acodec ac3 -b:a 192k -ar 48000 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="ac3dvd384">
+    <label>Ac3 DVD - 384kbps Stereo</label>
+    <cat>Audio</cat>
+    <ext>ac3</ext>
+	<format>ac3</format>
+    <ffmpeg_parameters>-f ac3 -acodec ac3 -b:a 384k -ar 48000 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="android1">
+    <label>Google Android compatible video</label>
+    <cat>Android</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters>-vf scale=480:320 -vcodec mpeg4 -acodec aac -ac 1 -ar 16000 -r 13 -b:a 32000 -aspect 3:2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="android2">
+    <label>Google Android compatible video. Video bitrate: 480 kb/s</label>
+    <cat>Android</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters>-vf scale=480:320 -vcodec mpeg4 -b:v 480k -acodec aac -ac 1 -ar 16000 -r 13 -b:a 32000 -aspect 3:2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="android3">
+    <label>Google Android video. VHQ 16:9 widescreen</label>
+    <cat>Android</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters>-vf scale=480:272 -vcodec libx264 -preset medium -b:v 500k -threads 0 -acodec aac -b:a 96k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="android4">
+    <label>Google Android video. VHQ 4:3 fullscreen</label>
+    <cat>Android</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters>-vf scale=432:320 -vcodec libx264 -preset medium -b:v 500k -threads 0 -acodec aac -b:a 96k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="divx">
+    <label>MS Compatible AVI</label>
+    <cat>AVI</cat>
+    <ext>avi</ext>
+	<format>avi</format>
+    <ffmpeg_parameters>-acodec libmp3lame -vcodec msmpeg4 -b:a 192k -b:v 1000k -vf scale=640:480 -ar 44100</ffmpeg_parameters>
+  </Profile>
+  <Profile name="dvntsc">
+    <label>Raw DV for NTSC Fullscreen</label>
+    <cat>DV</cat>
+    <ext>dv</ext>
+	<format>dv</format>
+    <ffmpeg_parameters>-target ntsc-dv -aspect 4:3 -f dv</ffmpeg_parameters>
+  </Profile>
+  <Profile name="dvpal">
+    <label>Raw DV for PAL Fullscreen</label>
+    <cat>DV</cat>
+    <ext>dv</ext>
+	<format>dv</format>
+    <ffmpeg_parameters>-target pal-dv -aspect 4:3 -f dv</ffmpeg_parameters>
+  </Profile>
+  <Profile name="iPodiTunesIphoneWS">
+    <label>iPhone WideScreen</label>
+    <cat>iPod-iTunes</cat>
+    <ext>m4v</ext>
+	<format>m4v</format>
+    <ffmpeg_parameters>-r 29.97 -vcodec libx264 -preset fast -flags +loop -cmp chroma -crf 21 -bt 256k -refs 1 -coder 0 -me_method full -me_range 16 -subq 5 -partitions +parti4x4+parti8x8+partp8x8 -g 250 -keyint_min 25 -level 30 -trellis 2 -sc_threshold 40 -i_qfactor 0.71 -vf scale=480:320 -aspect 16:9 -acodec aac -b:a 112k -ar 48000 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="iPodiTunesSmallCRF21FS">
+    <label>iPod Small Fullscreen</label>
+    <cat>iPod-iTunes</cat>
+    <ext>m4v</ext>
+	<format>m4v</format>
+    <ffmpeg_parameters>-r 29.97 -vcodec libx264 -preset medium -flags +loop -cmp chroma -crf 21 -bt 256k -refs 1 -coder 0 -me_method full -me_range 16 -subq 5 -partitions +parti4x4+parti8x8+partp8x8 -g 250 -keyint_min 25 -level 30 -trellis 2 -sc_threshold 40 -i_qfactor 0.71 -vf scale=320:240 -aspect 4:3 -acodec aac -b:a 112k -ar 48000 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="iPodiTunesSmallCRF21WS">
+    <label>iPod Small WideScreen</label>
+    <cat>iPod-iTunes</cat>
+    <ext>m4v</ext>
+	<format>m4v</format>
+    <ffmpeg_parameters>-r 29.97 -vcodec libx264 -preset medium -flags +loop -cmp chroma -crf 21 -bt 256k -refs 1 -coder 0 -me_method full -me_range 16 -subq 5 -partitions +parti4x4+parti8x8+partp8x8 -g 250 -keyint_min 25 -level 30 -trellis 2 -sc_threshold 40 -i_qfactor 0.71 -vf scale=320:176 -aspect 16:9 -acodec aac -b:a 112k -ar 48000 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="iPodiTunesSmallCRF21WSAna">
+    <label>iPod Small WideScreen Anamorphic</label>
+    <cat>iPod-iTunes</cat>
+    <ext>m4v</ext>
+	<format>m4v</format>
+    <ffmpeg_parameters>-r 29.97 -vf crop=iw:ih-2*60,scale=320:144 -vcodec libx264 -preset medium -flags +loop -cmp chroma -crf 21 -bt 256k -refs 1 -coder 0 -me_method full -me_range 16 -subq 5 -partitions +parti4x4+parti8x8+partp8x8 -g 250 -keyint_min 25 -level 30 -trellis 2 -sc_threshold 40 -i_qfactor 0.71 -aspect 2.35 -acodec aac -b:a 112k -ar 48000 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="iPodiTunesSmallCRF21WSLBFix">
+    <label>iPod Small Converted to WideScreen</label>
+    <cat>iPod-iTunes</cat>
+    <ext>m4v</ext>
+	<format>m4v</format>
+    <ffmpeg_parameters>-r 29.97 -vf crop=iw:ih-2*64,scale=320:176 -vcodec libx264 -preset medium -flags +loop -cmp chroma -crf 21 -bt 256k -refs 1 -coder 0 -me_method full -me_range 16 -subq 5 -partitions +parti4x4+parti8x8+partp8x8 -g 250 -keyint_min 25 -level 30 -trellis 2 -sc_threshold 40 -i_qfactor 0.71 -aspect 16:9 -acodec aac -b:a 112k -ar 48000 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="iPodiTunesTVOutCRF21FS">
+    <label>iPod TV Out Fullscreen</label>
+    <cat>iPod-iTunes</cat>
+    <ext>m4v</ext>
+	<format>m4v</format>
+    <ffmpeg_parameters>-r 29.97 -vcodec libx264 -preset medium -flags +loop -cmp chroma -crf 21 -bt 256k -refs 1 -coder 0 -me_method full -me_range 16 -subq 5 -partitions +parti4x4+parti8x8+partp8x8 -g 250 -keyint_min 25 -level 30 -trellis 2 -sc_threshold 40 -i_qfactor 0.71 -vf scale=512:384 -aspect 4:3 -acodec aac -b:a 112k -ar 48000 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="iPodiTunesTVOutCRF21WS">
+    <label>iPod TV Out Widescreen</label>
+    <cat>iPod-iTunes</cat>
+    <ext>m4v</ext>
+	<format>m4v</format>
+    <ffmpeg_parameters>-r 29.97 -vcodec libx264 -preset medium -flags +loop -cmp chroma -crf 21 -bt 256k -refs 1 -coder 0 -me_method full -me_range 16 -subq 5 -partitions +parti4x4+parti8x8+partp8x8 -g 250 -keyint_min 25 -level 30 -trellis 2 -sc_threshold 40 -i_qfactor 0.71 -vf scale=624:352 -aspect 16:9 -acodec aac -b:a 112k -ar 48000 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="iPodiTunesTVOutCRF21WSAna">
+    <label>iPod TV Out Widescreen Anamorphic</label>
+    <cat>iPod-iTunes</cat>
+    <ext>m4v</ext>
+	<format>m4v</format>
+    <ffmpeg_parameters>-r 29.97 -vf crop=iw:ih-2*60,scale=640:272 -vcodec libx264 -preset medium -flags +loop -cmp chroma -crf 21 -bt 256k -refs 1 -coder 0 -me_method full -me_range 16 -subq 5 -partitions +parti4x4+parti8x8+partp8x8 -g 250 -keyint_min 25 -level 30 -trellis 2 -sc_threshold 40 -i_qfactor 0.71 -aspect 2.35 -acodec aac -b:a 112k -ar 48000 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="iPodiTunesTVOutCRF21WSLBFix">
+    <label>iPod TV Out Converted to Widescreen</label>
+    <cat>iPod-iTunes</cat>
+    <ext>m4v</ext>
+	<format>m4v</format>
+    <ffmpeg_parameters>-r 29.97 -vf crop=iw:ih-2*64,scale=640:352 -vcodec libx264 -preset medium -flags +loop -cmp chroma -crf 21 -bt 256k -refs 1 -coder 0 -me_method full -me_range 16 -subq 5 -partitions +parti4x4+parti8x8+partp8x8 -g 250 -keyint_min 25 -level 30 -trellis 2 -sc_threshold 40 -i_qfactor 0.71 -aspect 16:9 -acodec aac -b:a 112k -ar 48000 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="mp3">
+    <label>MP3</label>
+    <cat>Audio</cat>
+    <ext>mp3</ext>
+	<format>mp3</format>
+    <ffmpeg_parameters>-acodec libmp3lame -b:a 160k -ac 2 -ar 44100</ffmpeg_parameters>
+  </Profile>
+  <Profile name="ntscdvdgoodqFS">
+    <label>NTSC DVD Fullscreen</label>
+    <cat>DVD</cat>
+    <ext>mpg</ext>
+	<format>dvd</format>
+    <ffmpeg_parameters>-f dvd -vcodec mpeg2video -r 30000/1001 -vf scale=352:480 -aspect 4:3 -b:v 4000k -mbd rd -trellis 1 -flags +mv0 -cmp 2 -subcmp 2 -acodec mp2 -b:a 192k -ar 48000 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="ntscdvdgoodqWS">
+    <label>NTSC DVD Widescreen</label>
+    <cat>DVD</cat>
+    <ext>mpg</ext>
+	<format>dvd</format>
+    <ffmpeg_parameters>-f dvd -vcodec mpeg2video -r 30000/1001 -vf scale=352:480 -aspect 16:9 -b:v 4000k -mbd rd -trellis 1 -flags +mv0 -cmp 2 -subcmp 2 -acodec mp2 -b:a 192k -ar 48000 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="ntscdvdhqFS">
+    <label>NTSC DVD HQ Fullscreen</label>
+    <cat>DVD</cat>
+    <ext>mpg</ext>
+	<format>dvd</format>
+    <ffmpeg_parameters>-f dvd -target ntsc-dvd -r 30000/1001 -vf scale=720:480 -aspect 4:3 -vb 8000k -mbd rd -trellis 1 -flags +mv0 -cmp 0 -subcmp 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="ntscdvdhqWS">
+    <label>NTSC DVD HQ Widescreen</label>
+    <cat>DVD</cat>
+    <ext>mpg</ext>
+	<format>dvd</format>
+    <ffmpeg_parameters>-f dvd -target ntsc-dvd -r 30000/1001 -vf scale=720:480 -aspect 16:9 -vb 8000k -g 12 -mbd rd -trellis 1 -flags +mv0 -cmp 0 -subcmp 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="ntscdvdlq">
+    <label>NTSC DVD Fast (LQ)</label>
+    <cat>DVD</cat>
+    <ext>mpg</ext>
+	<format>dvd</format>
+    <ffmpeg_parameters>-f dvd -target ntsc-dvd -b:v 5000k -r 30000/1001 -vf scale=720:480 -ar 48000 -b:a 384k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="ogg1">
+    <label>OGG</label>
+    <cat>Audio</cat>
+    <ext>ogg</ext>
+	<format>ogg</format>
+    <ffmpeg_parameters>-acodec libvorbis -aq 3 -vn -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="paldvdgoodqFS">
+    <label>PAL DVD Fullscreen</label>
+    <cat>DVD</cat>
+    <ext>mpg</ext>
+	<format>dvd</format>
+    <ffmpeg_parameters>-f dvd -vcodec mpeg2video -r 25.00 -vf scale=352:576 -aspect 4:3 -b:v 4000k -mbd rd -trellis 1 -flags +mv0 -cmp 2 -subcmp 2 -acodec mp2 -b:a 192k -ar 48000 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="paldvdgoodqWS">
+    <label>PAL DVD Widescreen</label>
+    <cat>DVD</cat>
+    <ext>mpg</ext>
+	<format>dvd</format>
+    <ffmpeg_parameters>-f dvd -vcodec mpeg2video -r 25.00 -vf scale=352:576 -aspect 16:9 -b:v 4000k -mbd rd -trellis 1 -flags +mv0 -cmp 2 -subcmp 2 -acodec mp2 -b:a 192k -ar 48000 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="paldvdhqFS">
+    <label>PAL DVD HQ Fullscreen</label>
+    <cat>DVD</cat>
+    <ext>mpg</ext>
+	<format>dvd</format>
+    <ffmpeg_parameters>-f dvd -target pal-dvd -aspect 4:3 -vb 8000k -mbd rd -trellis 1 -flags +mv0 -cmp 0 -subcmp 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="paldvdhqWS">
+    <label>PAL DVD HQ Widescreen</label>
+    <cat>DVD</cat>
+    <ext>mpg</ext>
+	<format>dvd</format>
+    <ffmpeg_parameters>-f dvd -target pal-dvd -aspect 16:9 -vb 8000k -mbd rd -trellis 1 -flags +mv0 -cmp 0 -subcmp 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="paldvdlq">
+    <label>PAL DVD Fast (LQ)</label>
+    <cat>DVD</cat>
+    <ext>mpg</ext>
+	<format>dvd</format>
+    <ffmpeg_parameters>-f dvd -target pal-dvd -b:v 5000k -r 25 -vf scale=720:576 -ar 48000 -b:a 384k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="ps3720p">
+    <label>PS3 720p Widescreen</label>
+    <cat>PS3</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters>-f mp4 -r 23.976 -vcodec libx264 -preset slow -vf scale=1280:720 -b:v 3000k -aspect 16:9 -flags +loop -cmp chroma -maxrate 3500k -bufsize 4M -bt 256k -refs 1 -bf 3 -coder 1 -me_method umh -me_range 16 -subq 7 -partitions +parti4x4+parti8x8+partp8x8+partb8x8 -g 250 -keyint_min 25 -level 30 -qmin 10 -qmax 51 -qcomp 0.6 -trellis 2 -sc_threshold 40 -i_qfactor 0.71 -acodec aac -b:a 384k -ar 48000 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="ps3720pfs">
+    <label>PS3 720p Fullscreen</label>
+    <cat>PS3</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters>-f mp4 -r 23.976 -vcodec libx264 -preset slow -vf scale=1280:720 -b:v 3000k -aspect 4:3 -flags +loop -cmp chroma -maxrate 3500k -bufsize 4M -bt 256k -refs 1 -bf 3 -coder 1 -me_method umh -me_range 16 -subq 7 -partitions +parti4x4+parti8x8+partp8x8+partb8x8 -g 250 -keyint_min 25 -level 30 -qmin 10 -qmax 51 -qcomp 0.6 -trellis 2 -sc_threshold 40 -i_qfactor 0.71 -acodec aac -b:a 384k -ar 48000 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="wma">
+    <label>WMA</label>
+    <cat>Audio</cat>
+    <ext>wma</ext>
+	<format></format>
+    <ffmpeg_parameters>-vn -acodec wmav2 -b:a 160k -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="wmv">
+    <label>WMV2 Generic</label>
+    <cat>Windows</cat>
+    <ext>wmv</ext>
+	<format></format>
+    <ffmpeg_parameters>-vcodec wmv2 -acodec wmav2 -b:v 1000k -b:a 160k -r 25 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="wmv2xbox360">
+    <label>Xbox 360</label>
+    <cat>Xbox</cat>
+    <ext>wmv</ext>
+	<format></format>
+    <ffmpeg_parameters>-vcodec wmv2 -acodec wmav2 -b:v 1200k -b:a 160k -r 25 -vf scale=720:480 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="x264HQFS">
+    <label>MP4 Fullscreen</label>
+    <cat>MPEG-4</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters>-f mp4 -r 29.97 -vcodec libx264 -preset slow -vf scale=640:480 -b:v 1000k -aspect 4:3 -flags +loop -cmp chroma -b:v 1250k -maxrate 1500k -bufsize 4M -bt 256k -refs 1 -bf 3 -coder 1 -me_method umh -me_range 16 -subq 7 -partitions +parti4x4+parti8x8+partp8x8+partb8x8 -g 250 -keyint_min 25 -level 30 -qmin 10 -qmax 51 -qcomp 0.6 -trellis 2 -sc_threshold 40 -i_qfactor 0.71 -acodec aac -b:a 112k -ar 48000 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="x264HQWS">
+    <label>MP4 Widescreen</label>
+    <cat>MPEG-4</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters>-f mp4 -r 29.97 -vcodec libx264 -preset slow -vf scale=704:384 -b:v 1000k -aspect 16:9 -flags +loop -cmp chroma -b:v 1250k -maxrate 1500k -bufsize 4M -bt 256k -refs 1 -bf 3 -coder 1 -me_method umh -me_range 16 -subq 7 -partitions +parti4x4+parti8x8+partp8x8+partb8x8 -g 250 -keyint_min 25 -level 30 -qmin 10 -qmax 51 -qcomp 0.6 -trellis 2 -sc_threshold 40 -i_qfactor 0.71 -acodec aac -b:a 112k -ar 48000 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <Profile name="wmv2720p">
+    <label>WMV 720p</label>
+    <cat>Windows</cat>
+    <ext>wmv</ext>
+	<format></format>
+    <ffmpeg_parameters>-vcodec wmv2 -acodec wmav2 -b:v 1200k -b:a 160k -r 25 -vf scale=1280:7200 -ac 2</ffmpeg_parameters>
+  </Profile>
+  <!-- custom values afterwards -->
+  <Profile name="MKVx264Vorbis">
+    <label>MKV using x264 for Video and Vorbis for Audio</label>
+    <cat>Matroska MKV</cat>
+    <ext>mkv</ext>
+	<format>matroska</format>
+    <ffmpeg_parameters>-f matroska -vcodec libx264 -acodec libvorbis</ffmpeg_parameters>
+  </Profile>
+  <Profile name="MKVvp8Vorbis">
+    <label>MKV using vp8 for Video and Vorbis for Audio</label>
+    <cat>Matroska MKV</cat>
+    <ext>mkv</ext>
+	<format>matroska</format>
+    <ffmpeg_parameters>-f matroska -vcodec vp8 -acodec libvorbis</ffmpeg_parameters>
+  </Profile>
+  <Profile name="MKVvp9Opus">
+    <label>MKV using vp9 for Video and Opus for Audio</label>
+    <cat>Matroska MKV</cat>
+    <ext>mkv</ext>
+	<format>matroska</format>
+    <ffmpeg_parameters>-f matroska -vcodec vp9 -acodec libopus</ffmpeg_parameters>
+  </Profile>
+  <Profile name="MKVMpeg4AAC">
+    <label>MKV using Mpeg4 for Video and AAC for Audio</label>
+    <cat>Matroska MKV</cat>
+	<format>matroska</format>
+    <ext>mkv</ext>
+    <ffmpeg_parameters>-f matroska -vcodec mpeg4 -strict experimental -acodec aac</ffmpeg_parameters>
+  </Profile>
+  <Profile name="3GPH263Amr_nb">
+    <label>3GP using H.263 for Video and Amr_nb for Audio</label>
+    <cat>3GP</cat>
+    <ext>3gp</ext>
+	<format>3gp</format>
+    <ffmpeg_parameters>-f 3gp -vcodec h263 -vf scale=352x288 -acodec amr_nb -ar 8000 -ac 1</ffmpeg_parameters>
+  </Profile>
+  <Profile name="3GPH264AAC">
+    <label>3GP using H.264 for Video and AAC for Audio</label>
+    <cat>3GP</cat>
+    <ext>3gp</ext>
+	<format>3gp</format>
+    <ffmpeg_parameters>-f 3gp -vcodec libx264  -strict experimental -acodec aac</ffmpeg_parameters>
+  </Profile>
+  <Profile name="WebmVp8VorbisVBR">
+    <label>Webm using Vp8 for Video and Vorbis for Audio - Variable Bitrate</label>
+    <cat>Webm</cat>
+    <ext>webm</ext>
+	<format>webm</format>
+    <ffmpeg_parameters>-f webm -c:v libvpx -acodec libvorbis -b:v 1M</ffmpeg_parameters>
+  </Profile>
+  <Profile name="WebmVp8VorbisCQ">
+    <label>Webm using Vp8 for Video and Vorbis for Audio - Constant Quality</label>
+    <cat>Webm</cat>
+    <ext>webm</ext>
+	<format>webm</format>
+    <ffmpeg_parameters>-f webm -c:v libvpx -acodec libvorbis -crf 10 -b:v 1M</ffmpeg_parameters>
+  </Profile>
+  <Profile name="WebmVp8VorbisCQ2">
+    <label>Webm using Vp8 for Video and Vorbis for Audio - Constant Quality 2</label>
+    <cat>Webm</cat>
+    <ext>webm</ext>
+	<format>webm</format>
+    <ffmpeg_parameters>-f webm -c:v libvpx -acodec libvorbis  -qmin 0 -qmax 50 -crf 5 -b:v 1M</ffmpeg_parameters>
+  </Profile>
+  <Profile name="WebmVp8VorbisCBR">
+    <label>Webm using Vp8 for Video and Vorbis for Audio - Constant Bitrate </label>
+    <cat>Webm</cat>
+    <ext>webm</ext>
+	<format>webm</format>
+    <ffmpeg_parameters>-f webm -c:v libvpx -acodec libvorbis -minrate 1M -maxrate 1M -b:v 1M</ffmpeg_parameters>
+  </Profile>
+  <Profile name="WebmVp9VorbisABR">
+    <label>Webm using Vp9 for Video and Vorbis for Audio - Average Bitrate</label>
+    <cat>Webm</cat>
+    <ext>webm</ext>
+	<format>webm</format>
+    <ffmpeg_parameters>-f webm -c:v libvpx-vp9 -acodec libvorbis -b:v 2M</ffmpeg_parameters>
+  </Profile>
+  <Profile name="WebmVp9VorbisABRFast">
+    <label>Webm using Vp9 for Video and Vorbis for Audio - Average Bitrate Fast</label>
+    <cat>Webm</cat>
+    <ext>webm</ext>
+	<format>webm</format>
+    <ffmpeg_parameters>-f webm -c:v libvpx-vp9 -acodec libvorbis -b:v 2M -deadline realtime</ffmpeg_parameters>
+  </Profile>
+  <Profile name="WebmVp9VorbisCQ">
+    <label>Webm using Vp9 for Video and Vorbis for Audio - Constant Quality</label>
+    <cat>Webm</cat>
+    <ext>webm</ext>
+	<format>webm</format>
+    <ffmpeg_parameters>-f webm -c:v libvpx-vp9 -acodec libvorbis -crf 30 -b:v 0</ffmpeg_parameters>
+  </Profile>
+  <Profile name="WebmVp9VorbisCoQ">
+    <label>Webm using Vp9 for Video and Vorbis for Audio - Constrained Quality</label>
+    <cat>Webm</cat>
+    <ext>webm</ext>
+	<format>webm</format>
+    <ffmpeg_parameters>-f webm -c:v libvpx-vp9 -acodec libvorbis -crf 30 -b:v 2000k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="WebmVp9VorbisCBR">
+    <label>Webm using Vp9 for Video and Vorbis for Audio - Constant Bitrate</label>
+    <cat>Webm</cat>
+    <ext>webm</ext>
+	<format>webm</format>
+    <ffmpeg_parameters>-f webm -c:v libvpx-vp9 -acodec libvorbis -minrate 1M -maxrate 1M -b:v 1M</ffmpeg_parameters>
+  </Profile>
+  <Profile name="WebmVp9VorbisLossless">
+    <label>Webm using Vp9 for Video and Vorbis for Audio - Lossless</label>
+    <cat>Webm</cat>
+    <ext>webm</ext>
+	<format>webm</format>
+    <ffmpeg_parameters>-f webm -c:v libvpx-vp9 -acodec libvorbis -lossless 1</ffmpeg_parameters>
+  </Profile>
+  <!-- H265 -->
+  <Profile name="H265UltrafastAAC">
+    <label>H265 for Video and AAC for Audio - Ultrafast</label>
+    <cat>MP4 H265</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx265 -preset ultrafast -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="H265SuperfastAAC">
+    <label>H265 for Video and AAC for Audio - Superfast</label>
+    <cat>MP4 H265</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx265 -preset superfast -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="H265VeryfastAAC">
+    <label>H265 for Video and AAC for Audio - Veryfast</label>
+    <cat>MP4 H265</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx265 -preset veryfast -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="H265FasterAAC">
+    <label>H265 for Video and AAC for Audio - Faster</label>
+    <cat>MP4 H265</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx265 -preset faster -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="H265FastAAC">
+    <label>H265 for Video and AAC for Audio - Fast</label>
+    <cat>MP4 H265</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx265 -preset fast -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="H265MediumAAC">
+    <label>H265 for Video and AAC for Audio - Medium</label>
+    <cat>MP4 H265</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx265 -preset medium -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="H265SlowAAC">
+    <label>H265 for Video and AAC for Audio - Slow</label>
+    <cat>MP4 H265</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx265 -preset slow -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="H265SlowerAAC">
+    <label>H265 for Video and AAC for Audio - Slower</label>
+    <cat>MP4 H265</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx265 -preset slower -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="H265SVeryslowAAC">
+    <label>H265 for Video and AAC for Audio - Veryslow </label>
+    <cat>MP4 H265</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx265 -preset veryslow -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  <!-- H264 -->
+  <Profile name="H264UltrafastAAC">
+    <label>H264 for Video and AAC for Audio - Ultrafast</label>
+    <cat>MP4 H264</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx264 -preset ultrafast -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="H264SuperfastAAC">
+    <label>H264 for Video and AAC for Audio - Superfast</label>
+    <cat>MP4 H264</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx264 -preset superfast -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="H264VeryfastAAC">
+    <label>H264 for Video and AAC for Audio - Veryfast</label>
+    <cat>MP4 H264</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx264 -preset veryfast -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="H264FasterAAC">
+    <label>H264 for Video and AAC for Audio - Faster</label>
+    <cat>MP4 H264</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx264 -preset faster -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="H264FastAAC">
+    <label>H264 for Video and AAC for Audio - Fast</label>
+    <cat>MP4 H264</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx264 -preset fast -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="H264MediumAAC">
+    <label>H264 for Video and AAC for Audio - Medium</label>
+    <cat>MP4 H264</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx264 -preset medium -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="H264SlowAAC">
+    <label>H264 for Video and AAC for Audio - Slow</label>
+    <cat>MP4 H264</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx264 -preset slow -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="H264SlowerAAC">
+    <label>H264 for Video and AAC for Audio - Slower</label>
+    <cat>MP4 H264</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx264 -preset slower -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="H264SVeryslowAAC">
+    <label>H264 for Video and AAC for Audio - Veryslow </label>
+    <cat>MP4 H264</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx264 -preset veryslow -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="H264SLosslessFastestAAC">
+    <label>H264 for Video and AAC for Audio - Lossless (fastest encoding) </label>
+    <cat>MP4 H264</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx264 -c:v libx264 -preset ultrafast -crf 0  -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="H264SLosslessBestCompressionAAC">
+    <label>H264 for Video and AAC for Audio - Lossless ((best compression) </label>
+    <cat>MP4 H264</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx264 -c:v libx264 -preset veryslow -crf 0  -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  
+  <Profile name="H264SlowerAAC23">
+    <label>H264 for Video and AAC for Audio - Slower - Default CRF (23)</label>
+    <cat>MP4 H264</cat>
+    <ext>mp4</ext>
+    <ffmpeg_parameters> -c:v libx264 -preset slower -crf 23 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  
+  <Profile name="H264SlowerAAC14">
+    <label>H264 for Video and AAC for Audio - Slower - Even Better Quality CRF (14)</label>
+    <cat>MP4 H264</cat>
+    <ext>mp4</ext>
+    <ffmpeg_parameters> -c:v libx264 -preset slower -crf 14 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  
+  <Profile name="H264SlowerAAC18">
+    <label>H264 for Video and AAC for Audio - Slower - Better CRF (18)</label>
+    <cat>MP4 H264</cat>
+    <ext>mp4</ext>
+    <ffmpeg_parameters> -c:v libx264 -preset slower -crf 18 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  
+  <Profile name="H264SlowerAAC0">
+    <label>H264 for Video and AAC for Audio - Slower - Lossless CRF (0)</label>
+    <cat>MP4 H264</cat>
+    <ext>mp4</ext>
+    <ffmpeg_parameters> -c:v libx264 -preset slower -crf 0 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  
+  <Profile name="H264SlowerAAC32">
+    <label>H264 for Video and AAC for Audio - Slower - More Compressed CRF (32)</label>
+    <cat>MP4 H264</cat>
+    <ext>mp4</ext>
+    <ffmpeg_parameters> -c:v libx264 -preset slower -crf 32 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  
+  <Profile name="H264SlowerAAC38">
+    <label>H264 for Video and AAC for Audio - Slower - Even More Compressed CRF (38)</label>
+    <cat>MP4 H264</cat>
+    <ext>mp4</ext>
+    <ffmpeg_parameters> -c:v libx264 -preset slower -crf 38 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  
+  <Profile name="H264SlowerAAC46">
+    <label>H264 for Video and AAC for Audio - Slower - Very Compressed - Bad Quality CRF (46)</label>
+    <cat>MP4 H264</cat>
+    <ext>mp4</ext>
+    <ffmpeg_parameters> -c:v libx264 -preset slower -crf 46 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="FLVMP3">
+    <label>Flash Video for Video and MP3 for Audio</label>
+    <cat>Flash Video</cat>
+    <ext>flv</ext>
+	<format>flv</format>
+    <ffmpeg_parameters>-ar 22050 -vol 100 -c:a libmp3lame -b:a 64k -qmax 14 -qmin 4 -c:v flv -r 25 -b:v 512k -f flv</ffmpeg_parameters>
+  </Profile>
+  
+  <Profile name="Mpeg2Mp2">
+    <label>MPEG-2 Video and MP2 for Audio</label>
+    <cat>MPEG-2</cat>
+    <ext>flv</ext>
+	<format>svcd</format>
+    <ffmpeg_parameters>-ac 2 -ar 48000 -vol 100 -c:a libtwolame -b:a 256k -qmax 6 -qmin 2 -qcomp 2 -c:v mpeg2video -r 25 -f svcd</ffmpeg_parameters>
+  </Profile>
+  
+  <Profile name="OggVideo">
+    <label>Theora for Video and Vorbis for Audio</label>
+    <cat>Ogg Video</cat>
+    <ext>ogv</ext>
+	<format>ogg</format>
+    <ffmpeg_parameters> -ar 44100 -vol 100 -c:a libvorbis -b:a 80k -qmax 4 -qmin 2 -c:v libtheora -b:v 600k -f ogg</ffmpeg_parameters>
+  </Profile>
+  
+  <Profile name="PSP16:9">
+    <label>PSP (16:9)</label>
+    <cat>PSP</cat>
+    <ext>mp4</ext>
+	<format>psp</format>
+    <ffmpeg_parameters>-ar 48000 -vol 100 -b:a 128k -vf scale=368:208 -r 29.97 -b:v 384k -f psp</ffmpeg_parameters>
+  </Profile>
+  
+  <Profile name="PSP4:3">
+    <label>PSP (4:3)</label>
+    <cat>PSP</cat>
+    <ext>mp4</ext>
+	<format>psp</format>
+    <ffmpeg_parameters> -ar 48000 -vol 100 -b:a 128k -vf scale=368:272 -r 29.97 -b:v 384k -f psp</ffmpeg_parameters>
+  </Profile>     
+  
+  <Profile name="AVIWMVWMA">
+    <label>AVI (WMV8+WMA)</label>
+    <cat>AVI</cat>
+    <ext>avi</ext>
+	<format>avi</format>
+    <ffmpeg_parameters> -vol 100 -c:a wmav2 -b:a 128k -qmax 18 -c:v wmv2 -b:v 1200k -f avi</ffmpeg_parameters>
+  </Profile>  
+  
+  <Profile name="AVIXVIDMP3">
+    <label>AVI (XviD+MP3)</label>
+    <cat>AVI</cat>
+    <ext>avi</ext>
+	<format>avi</format>
+    <ffmpeg_parameters>-vol 100 -c:a libmp3lame -b:a 160k -qmax 8 -qmin 2 -vtag XVID -c:v libxvid -f avi</ffmpeg_parameters>
+  </Profile>  
+  
+  <Profile name="QuicktimeMOV">
+    <label>Quicktime MOV</label>
+    <cat>Quicktime MOV</cat>
+    <ext>mov</ext>
+	<format>mov</format>
+    <ffmpeg_parameters>-acodec copy -vcodec copy -f mov</ffmpeg_parameters>
+  </Profile>  
+  
+  <Profile name="ffmpegMP4">
+    <label>Default MP4 - MPEG4 Video</label>
+    <cat>Default MP4 - MPEG4 Video</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>	
+    <ffmpeg_parameters></ffmpeg_parameters>
+  </Profile>    
+  
+  <Profile name="ffmpegWMV">
+    <label>Default WMV- Windows Media Video</label>
+    <cat>Default WMV- Windows Media Video</cat>
+    <ext>wmv</ext>
+	<format></format>
+    <ffmpeg_parameters>-q:a 2 -q:v 2 -vcodec msmpeg4 -acodec wmav2</ffmpeg_parameters>
+  </Profile>  
+  
+  <Profile name="ffmpegFLV">
+    <label>Default FLV - Flash Video Format</label>
+    <cat>Default FLV - Flash Video Format</cat>
+    <ext>flv</ext>
+	<format>flv</format>
+    <ffmpeg_parameters></ffmpeg_parameters>
+  </Profile>  
+  
+  <Profile name="ffmpegMPEG">
+    <label>Default MPEG - MPEG Video</label>
+    <cat>Default MPEG - MPEG Video</cat>
+    <ext>mpeg</ext>
+	<format>mpeg2video</format>
+    <ffmpeg_parameters></ffmpeg_parameters>
+  </Profile>  
+  
+  <Profile name="ffmpegAVI">
+    <label>Default AVI - Audio-Video Interleaved</label>
+    <cat>Default AVI - Audio-Video Interleaved</cat>
+    <ext>avi</ext>
+	<format>avi</format>
+    <ffmpeg_parameters></ffmpeg_parameters>
+  </Profile>  
+  
+  <Profile name="ffmpegMOV">
+    <label>Default MOV - Quicktime Video</label>
+    <cat>Default MOV - Quicktime Video</cat>
+    <ext>mov</ext>
+	<format>mov</format>
+    <ffmpeg_parameters></ffmpeg_parameters>
+  </Profile>
+
+	<Profile name="ffmpegMKV">
+    <label>Default MKV - Matroska Video</label>
+    <cat>Default MKV - Matroska Video</cat>
+    <ext>mkv</ext>
+	<format>matroska</format>
+    <ffmpeg_parameters></ffmpeg_parameters>
+  </Profile>  
+
+	<Profile name="ffmpeg3GP">
+    <label>Default 3GP - 3GP File Format</label>
+    <cat>Default 3GP - 3GP File Format</cat>
+    <ext>3gp</ext>
+	<format>3gp</format>
+    <ffmpeg_parameters>-r 20 -s 352x288 -b 400k -strict experimental -c:a aac -ac 1 -ar 8000 -ab 24k</ffmpeg_parameters>
+  </Profile>  
+
+	<Profile name="ffmpegMP4">
+    <label>Default SWF - SWF Flash Video</label>
+    <cat>Default SWF - SWF Flash Video</cat>
+    <ext>swf</ext>
+	<format>swf</format>
+    <ffmpeg_parameters></ffmpeg_parameters>
+  </Profile>
+
+	<Profile name="ffmpegMP4">
+    <label>Default VOB - Video Object Format</label>
+    <cat>Default VOB - Video Object Format</cat>
+    <ext>vob</ext>
+	<format>vob</format>
+    <ffmpeg_parameters></ffmpeg_parameters>
+  </Profile>    
+  
+  <Profile name="PreviewJoin">
+    <label>Preview Join - Ultrafast</label>
+    <cat>Preview Join</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx264 -preset ultrafast -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  
+  <Profile name="Ultrafast">
+    <label>Ultrafast</label>
+    <cat>Ultrafast</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx264 -preset ultrafast -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  
+  <Profile name="Superfast">
+    <label>Superfast</label>
+    <cat>Superfast</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx264 -preset superfast -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>
+  <Profile name="Veryfast">
+    <label>Veryfast</label>
+    <cat>Veryfast</cat>
+    <ext>mp4</ext>
+	<format>mp4</format>
+    <ffmpeg_parameters> -c:v libx264 -preset veryfast -crf 28 -c:a aac -b:a 128k</ffmpeg_parameters>
+  </Profile>     
+  
+  <Profile name="ffmpegAnimatedGIF320">
+    <label>Animated GIF - Width 320 pixels</label>
+    <cat>Animated GIF</cat>
+    <ext>gif</ext>
+	<format></format>
+    <ffmpeg_parameters>-vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0</ffmpeg_parameters>
+  </Profile>  
+  
+  <Profile name="ffmpegAnimatedGIFOriginalSize">
+    <label>Animated GIF - Original Size</label>
+    <cat>Animated GIF</cat>
+    <ext>gif</ext>
+	<format></format>
+    <ffmpeg_parameters>-vf "fps=10,scale=iw:ih:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0</ffmpeg_parameters>
+  </Profile>  
+  
+  <Profile name="ffmpegAnimatedGIF640">
+    <label>Animated GIF - Width 640 pixels</label>
+    <cat>Animated GIF</cat>
+    <ext>gif</ext>
+	<format></format>
+    <ffmpeg_parameters>-vf "fps=10,scale=640:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0</ffmpeg_parameters>
+  </Profile>  
+  
+  <RecentProfiles>    
+  </RecentProfiles>
+</Profiles>
